@@ -65,7 +65,7 @@ class CreateAdminTables extends Migration
             $table->index(['role_id', 'user_id']);
             $table->timestamps();
         });
-
+use Illuminate\Support\Facades\Schema;
         Schema::create(config('admin.database.role_permissions_table'), function (Blueprint $table) {
             $table->integer('role_id');
             $table->integer('permission_id');
